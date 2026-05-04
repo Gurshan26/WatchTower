@@ -14,3 +14,4 @@ docs/screenshots/*.png
 
 # SQLite sidecar files
 data/*.db-*
+.vercel
