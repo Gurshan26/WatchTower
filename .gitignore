@@ -11,3 +11,6 @@ data/*.db
 /tmp/*.db
 .DS_Store
 docs/screenshots/*.png
+
+# SQLite sidecar files
+data/*.db-*
