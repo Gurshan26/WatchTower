@@ -1,0 +1,189 @@
+.container {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.empty {
+  border: 1px dashed var(--border-2);
+  border-radius: 6px;
+  padding: 20px;
+  color: var(--text-2);
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 12px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.traceId {
+  color: var(--text);
+}
+
+.totalDuration,
+.spanCount {
+  color: var(--text-2);
+}
+
+.waterfallWrap {
+  overflow: auto;
+}
+
+.waterfall {
+  display: block;
+}
+
+.spanRow {
+  cursor: pointer;
+}
+
+.rowBg {
+  transition: 100ms ease;
+}
+
+.spanBar {
+  transition: 100ms ease;
+}
+
+.spanLabel {
+  user-select: none;
+}
+
+.detailPanel {
+  border-top: 1px solid var(--border);
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.detailHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detailName {
+  font-weight: 600;
+}
+
+.detailDuration {
+  color: var(--text-2);
+  font-family: var(--font-mono);
+}
+
+.detailClose {
+  margin-left: auto;
+  border: 1px solid var(--border-2);
+  background: var(--surface-2);
+  color: var(--text-2);
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.detailField {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px;
+  display: grid;
+  gap: 4px;
+}
+
+.fieldLabel {
+  color: var(--text-3);
+  font-size: 11px;
+}
+
+.fieldValue {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+
+.ok {
+  color: var(--green);
+  background: var(--green-bg);
+}
+
+.error {
+  color: var(--red);
+  background: var(--red-bg);
+}
+
+.unset {
+  color: var(--text-2);
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.errorMessage {
+  color: var(--red);
+  background: var(--red-bg);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.errorIcon {
+  font-family: var(--font-mono);
+}
+
+.attributeList {
+  display: grid;
+  gap: 6px;
+}
+
+.attributeTitle {
+  color: var(--text-2);
+  font-size: 12px;
+}
+
+.attribute {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px;
+  display: grid;
+  gap: 2px;
+}
+
+.attrKey {
+  color: var(--text-3);
+  font-size: 11px;
+}
+
+.attrValue {
+  color: var(--text);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+}
